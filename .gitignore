@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+
+# Sanal ortam klasörü
+venv/
+.venv/
+
+# Ortam değişkenleri (.env dosyası gibi gizli bilgiler)
+.env
+.env.*
+
+# IDE/editor ayarları
+.vscode/
+.idea/
+
+# MacOS/Linux sistem dosyaları
+.DS_Store
+Thumbs.db
+
+htmlcov/
+coverage.xml
+.cache/
+.pytest_cache/
