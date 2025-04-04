@@ -1,4 +1,4 @@
-# FastAPI ToDo API Project Overview
+# FastAPI ToDo API (Docker + PostgreSQL + CI/CD)
 
 This project is a backend-focused ToDo application built with FastAPI and enhanced with DevOps best practices. It was developed step-by-step with a strong emphasis on understanding modern development and deployment workflows.
 
