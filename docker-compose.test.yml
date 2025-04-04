@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: todo-api-test
+    depends_on:
+      - db
+    ports:
+      - "8001:8000"  #Test host of api port changed
+    environment:
+      - DATABASE_URL=postgresql://todo_user:secretpassword@db:5432/testdb
+    command: pytest tests/test_todos.py --disable-warnings --maxfail=1
+
+  db:
+    image: postgres:15
+    container_name: todo-postgres-test
+    restart: always
+    ports:
+      - "5433:5432"  #Test host of database port changed.
+    environment:
+      - POSTGRES_USER=todo_user
+      - POSTGRES_PASSWORD=secretpassword
+      - POSTGRES_DB=testdb
+    volumes:
+      - postgres_data_test:/var/lib/postgresql/data
+
+volumes:
+  postgres_data_test:
