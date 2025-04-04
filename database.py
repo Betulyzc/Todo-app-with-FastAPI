@@ -1,10 +1,10 @@
 #database.py 
-
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL="postgresql://todo_user:todo_pass@localhost:5432/tododb"
+DATABASE_URL=os.getenv("DATABASE_URL")
 
 engine=create_engine(DATABASE_URL)
 

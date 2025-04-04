@@ -1,27 +1,44 @@
-# Python
+# -------------------------------
+# Python cache dosyaları
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 *.sqlite3
 
-# Sanal ortam klasörü
+# -------------------------------
+# Sanal ortam (virtualenv)
 venv/
 .venv/
 
-# Ortam değişkenleri (.env dosyası gibi gizli bilgiler)
+# -------------------------------
+# Ortam değişken dosyaları (gizli bilgiler)
 .env
 .env.*
+!.env.example  # sadece örnek dosya hariç tutulmaz
 
-# IDE/editor ayarları
+# -------------------------------
+# IDE/editor klasörleri
 .vscode/
 .idea/
 
-# MacOS/Linux sistem dosyaları
+# -------------------------------
+# İşletim sistemi dosyaları
 .DS_Store
 Thumbs.db
 
+# -------------------------------
+# Test ve coverage dosyaları
 htmlcov/
 coverage.xml
 .cache/
 .pytest_cache/
+
+# -------------------------------
+# Log dosyaları
+*.log
+
+# -------------------------------
+# Docker veritabanı dosyaları 
+*.db
+
