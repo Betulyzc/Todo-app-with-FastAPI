@@ -11,3 +11,5 @@ engine=create_engine(DATABASE_URL)
 SessionLocal=sessionmaker(autocommit=False, autoflush=False,bind=engine)
 
 Base=declarative_base()
+#Base is the hub that "knows" all tables in the project.
+#The base class from which all model (table) classes will derive
